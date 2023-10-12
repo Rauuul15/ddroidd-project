@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ddroidd</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="main.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="logo-wrapper">
+          <img src="public/assets/img/ddroidd_logo.svg" alt="logo" />
+        </div>
+          <div class="bootcamp">Autumn - Winter Bootcamp</div>
+          <div style="visibility: hidden;">
+            <a href="form.html"
+              ><input type="button" name="join" id="join" value="Join Us"
+            /></a>
+          </div>
+      </div>
+    </header>
+
+    <main>
+        <div class="legend">
+        <form action="">
+          <fieldset>
+            <p class="applicationTitle">Application Form</p>
+
+            <div class="information">
+              Contact Information</div>
+              <p class="name">
+                First Name <span>*</span>
+                <input
+                  type="text"
+                  name="firstName"
+                  id="firstName"
+                  placeholder="First Name"
+                  
+                />
+                Last Name <span>*</span>
+                <input
+                  type="text"
+                  name="lastName"
+                  id="lastName"
+                  placeholder="Last Name"
+                  
+                />
+              </p>
+
+              <p class="number&address">
+                Phone number <span>*</span>
+                <input
+                  type="tel"
+                  name="phoneNumber"
+                  id="phoneNumber"
+                  placeholder="Phone number"
+                  
+                />
+                Email address <span>*</span>
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  placeholder="Email address"
+                  
+                />
+              </p>
+            
+            <div class="information">
+              Address
+              <p class="address">
+                Address Line 1 <span>*</span>
+                <input
+                  type="text"
+                  name="address"
+                  id="address"
+                  placeholder="Street name & number"
+                  
+                />
+
+                Address Line 2
+                <input
+                  type="text"
+                  name="address"
+                  id="address"
+                  placeholder="Suite, apartment"
+                />
+              </p>
+              <div class="location">
+              <p >
+                Country <span>*</span>
+                <select name="country" id="country" onchange="getCitiesByCountry(this.value)" onselect="getStatesByCountry(this.value)">
+                    <option value="" disabled selected>Country</option>
+                </select>
+              </p>
+              <p class="state">
+                State 
+                <select name="state" id="state">
+                    <option value="" disabled selected>State</option>
+                </select>
+              </p>
+              <p class="city">
+                City <span>*</span>
+                <select name="city" id="city" >
+                    <option value="" disabled selected>City</option>
+                  
+                </select>
+              </p>
+            </div>
+            </div>
+          </fieldset>
+          <div>
+            <!-- <a href="congrats.html"> -->
+              <input type="button" name="join" id="join" value="Join Us" onClick="verifyInput()" />
+            <!-- </a> -->
+          </div>
+        </form>
+        <div id="inputErrors"></div>
+        
+      </div>
+    </div>
+    </main>
+
+    <footer class="footer">
+      Come to the dark side... we have
+      <img src="public/assets/img/cookies.svg" alt="cookies" />
+    </footer>
+  </body>
+</html>
